@@ -129,13 +129,13 @@ html {
   align-items: center;
 }
 
-.account-nav__list {
+.account-nav__item {
   display: block;
   list-style: none;
 }
 
-.account-nav__list:hover,
-.account-nav__list:focus {
+.account-nav__item:hover,
+.account-nav__item:focus {
   text-decoration: underline;
 }
 
@@ -200,7 +200,7 @@ html {
   color: var(--green-blog-blog-and-focus);
 }
 
-.below-top__list {
+.below-top__item {
   display: block;
   color: var(--color-for-nav);
   font-family: var(--main-font);
@@ -209,7 +209,7 @@ html {
   padding: 5px 11px;
 }
 
-.below-top__list:last-child {
+.below-top__item:last-child {
   padding-right: 0;
 }
 
@@ -241,7 +241,7 @@ html {
   flex-direction: column;
 }
 
-.top-banner p {
+.top-banner > p {
   margin: 0;
   padding: 0;
   margin-bottom: 25px;
@@ -260,8 +260,9 @@ html {
   font-weight: 400;
 }
 
-.top-banner__text-bold {
+.top-banner__text-sale {
   color: var(--green-choice-and-top-line);
+  font-weight: 400;
 }
 
 .top-banner a {
@@ -331,7 +332,7 @@ html {
   margin-top: 30px;
 }
 
-.about__item-1::before {
+.about__item-settings::before {
   display: inline-block;
   width: 50px;
   height: 50px;
@@ -342,7 +343,7 @@ html {
   background-size: contain;
 }
 
-.about__item-2::before {
+.about__item-money::before {
   display: inline-block;
   width: 50px;
   height: 50px;
@@ -353,7 +354,7 @@ html {
   background-size: contain;
 }
 
-.about__item-3::before {
+.about__item-worldwide::before {
   display: inline-block;
   width: 50px;
   height: 50px;
@@ -364,7 +365,7 @@ html {
   background-size: contain;
 }
 
-.about__item-4::before {
+.about__item-shipping::before {
   display: inline-block;
   width: 50px;
   height: 50px;
@@ -523,7 +524,7 @@ html {
   width: 255px;
 }
 
-.gallery__actions {
+.gallery__buttons {
   margin: 0;
   padding: 0;
   position: absolute;
@@ -541,17 +542,17 @@ html {
   transition: opacity var(--animation-time) var(--timing-fn);
 }
 
-.gallery__actions:hover {
+.gallery__buttons:hover {
   opacity: 1;
 }
 
-.gallery__actions > button {
+.gallery__buttons > button {
   margin: 0;
   padding: 0;
 
 }
 
-.icon-like {
+.gallery__button--like {
   margin: 0;
   padding: 0;
   background-color: transparent;
@@ -563,7 +564,7 @@ html {
   background-position: center;
 }
 
-.icon-share {
+.gallery__button--share {
   margin: 0;
   padding: 0;
   background-color: transparent;
@@ -575,7 +576,7 @@ html {
   background-position: center;
 }
 
-.icon-clock {
+.gallery__button--clock {
   margin: 0;
   padding: 0;
   background-color: transparent;
@@ -587,7 +588,7 @@ html {
   background-position: center;
 }
 
-.icon-cart {
+.gallery__button--cart {
   margin: 0;
   padding: 0;
   background-color: transparent;
@@ -599,39 +600,39 @@ html {
   background-position: center;
 }
 
-.gallery__actions > button {
+.gallery__buttons > button {
   border: 1px solid #fff;
 }
 
-.gallery__actions > button:nth-child(3n) {
+.gallery__buttons > button:nth-child(3n) {
   margin-right: 0;
 }
 
-.icon-like:hover,
-.icon-like:focus {
+.gallery__button--like:hover,
+.gallery__button--like:focus {
   background-color: var(--green-choice-and-top-line);
   cursor: pointer;
 }
 
-.icon-share:hover,
-.icon-share:focus {
+.gallery__button--share:hover,
+.gallery__button--share:focus {
   background-color: var(--green-choice-and-top-line);
   cursor: pointer;
 }
 
-.icon-clock:hover,
-.icon-clock:focus {
+.gallery__button--clock:hover,
+.gallery__button--clock:focus {
   background-color: var(--green-choice-and-top-line);
   cursor: pointer;
 }
 
-.icon-cart:hover,
-.icon-cart:focus {
+.gallery__button--cart:hover,
+.gallery__button--cart:focus {
   background-color: var(--dark-gray);
   cursor: pointer;
 }
 
-.gallery__link:hover > .gallery__actions {
+.gallery__link:hover > .gallery__buttons {
   display: flex;
   opacity: 1;
 }
@@ -650,8 +651,6 @@ html {
   display: flex;
   padding: 0;
   margin: 0;
-  margin-left: auto;
-  margin-right: auto;
   font-size: 0;
 }
 
@@ -698,7 +697,7 @@ html {
 
 .news__item {
   list-style: none;
-  display: inline-block;
+  display: block;
 }
 
 .news__item > .news__link {
@@ -710,11 +709,11 @@ html {
   background-color: var(--green-blog-blog-and-focus);
 }
 
-.news__list {
+.news__item {
   margin-right: 30px;
 }
 
-.news__list:nth-child(3n) {
+.news__item:nth-child(3n) {
   margin-right: 0;
 }
 
